@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MvvmGuia.Vista.Pokemon.Registrarpokemon"
+             NavigationPage.HasNavigationBar="False">
+    <Grid RowDefinitions="80,*"
+          BackgroundColor="#313131">
+        <StackLayout Orientation="Horizontal"
+                     Margin="10">
+            <Image Source="flechaabajo.png"
+                   HeightRequest="50"
+                   WidthRequest="50">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding VolveralistapokemonCommand}" />
+                </Image.GestureRecognizers>
+            </Image >
+            <Image Source="LogoPokemon.png"
+                   HorizontalOptions="CenterAndExpand" />
+            <Image Source="pokebola.png" />
+        </StackLayout>
+        <StackLayout Grid.Row="1"
+                     Margin="10">
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Nombre:"
+                       TextColor="White"
+                       FontAttributes="Bold"
+                       VerticalOptions="Center" />
+                <Entry Placeholder="Ingrese el nombre"
+                       FontAttributes="Bold"
+                       TextColor="#FFE053"
+                       PlaceholderColor="White"
+                       TextTransform="Lowercase"
+                       FontSize="15"
+                       HorizontalOptions="StartAndExpand"
+                       Text="{Binding Txtnombre}" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Color de fondo:"
+                       TextColor="White"
+                       FontAttributes="Bold"
+                       VerticalOptions="Center" />
+                <Entry Placeholder="Ingrese el color del fondo"
+                       FontAttributes="Bold"
+                       TextColor="{Binding Txtcolorfondo}"
+                       PlaceholderColor="White"
+                       TextTransform="Lowercase"
+                       FontSize="15"
+                       HorizontalOptions="StartAndExpand"
+                       Text="{Binding Txtcolorfondo}" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Nro:"
+                       TextColor="White"
+                       FontAttributes="Bold"
+                       VerticalOptions="Center" />
+                <Entry Placeholder="Ingrese Nro"
+                       FontAttributes="Bold"
+                       TextColor="White"
+                       PlaceholderColor="White"
+                       TextTransform="Lowercase"
+                       FontSize="15"
+                       HorizontalOptions="StartAndExpand"
+                       Text="{Binding Txtnro}" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Icono:"
+                       TextColor="White"
+                       FontAttributes="Bold"
+                       VerticalOptions="Center" />
+                <Entry Placeholder="Ingrese Icono"
+                       FontAttributes="Bold"
+                       TextColor="White"
+                       PlaceholderColor="White"
+                       TextTransform="Lowercase"
+                       FontSize="15"
+                       HorizontalOptions="StartAndExpand"
+                       Text="{Binding Txticono}" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Poder:"
+                       TextColor="White"
+                       FontAttributes="Bold"
+                       VerticalOptions="Center" />
+                <Entry Placeholder="Ingrese poder"
+                       FontAttributes="Bold"
+                       TextColor="White"
+                       PlaceholderColor="White"
+                       TextTransform="Lowercase"
+                       FontSize="15"
+                       HorizontalOptions="StartAndExpand"
+                       Text="{Binding Txtpoder}" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Color poder:"
+                       TextColor="White"
+                       FontAttributes="Bold"
+                       VerticalOptions="Center" />
+                <Entry Placeholder="Ingrese color"
+                       FontAttributes="Bold"
+                       TextColor="{Binding Txtcolorpoder}"
+                       PlaceholderColor="White"
+                       TextTransform="Lowercase"
+                       FontSize="15"
+                       HorizontalOptions="StartAndExpand"
+                       Text="{Binding Txtcolorpoder}" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal"
+                         HorizontalOptions="Center">
+                <Image Source="ojo.png"
+                       HeightRequest="20" />
+                <Label Text="Vista previa"
+                       FontSize="20"
+                       TextColor="#F318CB"
+                       FontAttributes="Italic"
+                       VerticalOptions="Center" />
+            </StackLayout>
+            <Grid RowDefinitions="100,*"
+                  Margin="0,10,0,0">
+                <Frame Grid.Row="1"
+                       WidthRequest="250"
+                       HorizontalOptions="Center"
+                       CornerRadius="15"
+                       Margin="0,-40,0,0"
+                       BackgroundColor="{Binding Txtcolorfondo}">
+                    <StackLayout Margin="0,90,0,70">
+                        <Label Text="{Binding Txtnro}" />
+                        <Label Text="{Binding Txtnombre}"
+                               CharacterSpacing="1"
+                               FontSize="20"
+                               Margin="0,0,0,10" />
+                        <Button Text="{Binding Txtpoder}"
+                                CornerRadius="30"
+                                HorizontalOptions="Start"
+                                TextTransform="None"
+                                HeightRequest="40"
+                                BackgroundColor="{Binding Txtcolorpoder}"
+                                Margin="0,0,0,30" />
+                    </StackLayout>
+                </Frame>
+                <Image Source="{Binding Txticono}"
+                       Grid.RowSpan="2"
+                       HeightRequest="180"
+                       VerticalOptions="StartAndExpand" />
+            </Grid>
+            <Frame HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   Padding="6"
+                   Margin="0,20,0,10"
+                   CornerRadius="15"
+                   HasShadow="False"
+                   BackgroundColor="#D013AE">
+                <Button Text="+"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        BackgroundColor="#FF84E9"
+                        BorderColor="#DE47C3"
+                        BorderWidth="4"
+                        CornerRadius="15"
+                        FontAttributes="Bold"
+                        FontSize="25"
+                        WidthRequest="50"
+                        HeightRequest="50"
+                        Command="{Binding InsertarCommand}"/>
+            </Frame>
+        </StackLayout>
+    </Grid>
+</ContentPage>

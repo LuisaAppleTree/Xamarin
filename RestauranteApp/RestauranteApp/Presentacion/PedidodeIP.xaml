@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RestauranteApp.Presentacion.PedidodeIP"
+             BackgroundColor="DarkGreen">
+    <Frame Margin="20"
+           Padding="20"
+           CornerRadius="15"
+           BackgroundColor="#243027">
+        <StackLayout HorizontalOptions="CenterAndExpand"
+                     VerticalOptions="CenterAndExpand">
+            <Entry x:Name="txtconexion"
+                   Placeholder="Ingrese la IP de la PC principal"
+                   TextColor="White"
+                   PlaceholderColor="FloralWhite" />
+            <Button Text="Conectar"
+                    BackgroundColor="FloralWhite"
+                    TextColor="Black"
+                    FontAttributes="Bold"
+                    x:Name="btnConectar"
+                    Clicked="btnConectar_Clicked"
+                    CornerRadius="10" />
+        </StackLayout>
+    </Frame>
+</ContentPage>

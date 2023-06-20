@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Conversor.Vistas.Menuprincipal"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical"
+                     BackgroundColor="#FFB7E5">
+            <Label Text="Conversor"
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Center"
+                   FontSize="40"
+                   FontAttributes="Bold"
+                   Margin="0,20,0,0"></Label>
+            <Frame VerticalOptions="FillAndExpand"
+                   Margin="10"
+                   CornerRadius="20"
+                   HasShadow="False">
+                <StackLayout VerticalOptions="Center"
+                             Spacing="20">
+                    <Image Source="https://i.redd.it/bjgegel2h0n81.jpg"></Image>
+                    <Label Text="(cm) a (m)"
+                           FontAttributes="Bold"
+                           FontSize="40"
+                           HorizontalOptions="Center"></Label>
+                    <Button Text="Iniciar"
+                            TextTransform="None"
+                            BackgroundColor="#F232AD"
+                            CornerRadius="10"
+                            FontSize="Medium"
+                            FontAttributes="Bold"
+                            Clicked="Button_Clicked"></Button>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

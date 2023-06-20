@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Conversor.Vistas.Convertir"
+             NavigationPage.HasNavigationBar="False"
+             Visual="Material">
+    <Grid BackgroundColor="#FFC5D8">
+        <StackLayout VerticalOptions="Center"
+                     Margin="20">
+            <Image Source="mundito.png"
+                   Margin="20" />
+            <Frame HasShadow="False"
+                   CornerRadius="15">
+                <Entry Keyboard="Numeric"
+                       Placeholder="Centímetros (cm)"
+                       TextColor="Fuchsia"
+                       PlaceholderColor="DarkGray"
+                       FontSize="Large"
+                       x:Name="txtcm"></Entry>
+            </Frame>
+            <Button Text="Calcular"
+                    CornerRadius="10"
+                    FontSize="Large"
+                    FontAttributes="Bold"
+                    Margin="0,20,0,0"
+                    TextTransform="None"
+                    BackgroundColor="#9D96B6"
+                    TextColor="White"
+                    Clicked="BtnCalcular_Clicked"></Button>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Resultado"
+                       FontSize="Large"
+                       FontAttributes="Bold"
+                       VerticalOptions="Center"></Label>
+                <Label Text="0.00"
+                       FontSize="Large"
+                       FontAttributes="Bold"
+                       VerticalOptions="Center"
+                       x:Name="lblResultado"></Label>
+            </StackLayout>
+            <Button Text="volver"
+                    TextTransform="None"
+                    BackgroundColor="#343A43"
+                    TextColor="White"
+                    FontSize="Large"
+                    FontAttributes="Bold"
+                    HorizontalOptions="Center"
+                    CornerRadius="10"
+                    Clicked="BtnVolver_Clicked"></Button>
+        </StackLayout>
+    </Grid>
+</ContentPage>
+    
+   
+    
+    
+    

@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MvvmGuia.Vista.Menuprincipal"
+             NavigationPage.HasNavigationBar="False">
+    <Grid BackgroundColor="#0F0B34">
+        <CollectionView ItemsSource="{Binding listapaginas}"
+                        VerticalOptions="Center"
+                        Margin="20,0,20,0"
+                        x:Name="listaPages">
+            <CollectionView.Header>
+                <StackLayout>
+                    <Label Text="Paginas"
+                           FontAttributes="Bold"
+                           FontSize="30"
+                           TextColor="FloralWhite"
+                           HorizontalTextAlignment="Center"
+                           Margin="0,30,0,0"/>
+                </StackLayout>
+            </CollectionView.Header>
+            <CollectionView.ItemsLayout>
+                <GridItemsLayout Orientation="Vertical"
+                                 Span="1"
+                                 VerticalItemSpacing="20" />
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame CornerRadius="20"
+                           BackgroundColor="#EFA7DC">
+                        <StackLayout Orientation="Horizontal"
+                                     Padding="10">
+                            <Image Source="{Binding Icono}"
+                                   HeightRequest="150" />
+                            <Label Text="{Binding Pagina}"
+                                   VerticalOptions="Center"
+                                   FontSize="Large"
+                                   FontAttributes="Bold"
+                                   TextColor="Honeydew" />
+                        </StackLayout>
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding Path = BindingContext.NavegarCommand, Source={x:Reference listaPages}}"
+                                                  CommandParameter="{Binding .}" />
+                        </Frame.GestureRecognizers>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </Grid>
+</ContentPage>
